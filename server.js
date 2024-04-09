@@ -12,7 +12,7 @@ app.use(express.static('public'));
 // Route for generating passwords
 app.get('/generate-password', (req, res) => {
     const password = generatePassword.generate({
-        length: 50,
+        length: 20,
         numbers: true,
         uppercase: true,
         lowercase: true,
