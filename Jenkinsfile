@@ -1,26 +1,21 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_USERNAME = 'kimo23'
-        DOCKERHUB_PASSWORD = credentials('dockerhub-credentials-id')
+        DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
     }
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-        stage('Build & Push Docker Images') {
+        stage('Build and Push Docker Images') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials-id') {
+                    // Login to Docker Hub
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS_ID) {
                         // Build and push backend image
-                        def backendImage = docker.build("yourdockerhubusername/password-generator-backend:${env.BUILD_ID}")
-                        backendImage.push("latest")
-                        
-                        // Build and push frontend image
-                        def frontendImage = docker.build("yourdockerhubusername/password-generator-frontend:${env.BUILD_ID}")
-                        frontendImage.push("latest")
+                        def backendApp = docker.build("kimo23/password-generator-backend:${env.BUILD_NUMBER}")
+                        backendApp.push()
+
+                        // Build and push frontend image (assuming public directory holds the Dockerfile for frontend)
+                        def frontendApp = docker.build("kimo23/password-generator-frontend:${env.BUILD_NUMBER}", "./public")
+                        frontendApp.push()
                     }
                 }
             }
@@ -28,8 +23,8 @@ pipeline {
         stage('Deploy with Ansible') {
             steps {
                 script {
-                    // Assuming Ansible and required collections are installed on Jenkins agent
-                    sh 'ansible-playbook -i inventory playbook.yml --extra-vars "dockerhub_username=$DOCKERHUB_USERNAME dockerhub_password=$DOCKERHUB_PASSWORD"'
+                    // Run your Ansible playbook here. Ensure Ansible is installed on the Jenkins executor.
+                    sh 'ansible-playbook -i inventory.yml playbook.yml --extra-vars "backend_image_tag=${env.BUILD_NUMBER} frontend_image_tag=${env.BUILD_NUMBER}"'
                 }
             }
         }
