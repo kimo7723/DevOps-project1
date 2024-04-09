@@ -1,0 +1,25 @@
+{
+  "name": "devops-project1",
+  "version": "1.0.0",
+  "description": "DevOps roject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimo7723/DevOps-project1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimo7723/DevOps-project1/issues"
+  },
+  "homepage": "https://github.com/kimo7723/DevOps-project1#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "generate-password": "^1.7.1",
+    "sqlite3": "^5.1.7"
+  }
+}
