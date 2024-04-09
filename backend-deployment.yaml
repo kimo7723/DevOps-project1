@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: password-generator-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: password-generator-backend
+  template:
+    metadata:
+      labels:
+        app: password-generator-backend
+    spec:
+      containers:
+      - name: backend
+        image: kimo23/password-generator-backend
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        volumeMounts:
+        - name: db-volume
+          mountPath: /usr/src/app/db
+      volumes:
+      - name: db-volume
+        hostPath:
+          path: /mnt/data
+          type: DirectoryOrCreate
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: password-generator-backend
+spec:
+  selector:
+    app: password-generator-backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: LoadBalancer

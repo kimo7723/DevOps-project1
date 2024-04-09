@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: password-generator-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: password-generator-frontend
+  template:
+    metadata:
+      labels:
+        app: password-generator-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: kimo23/password-generator-frontend
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: password-generator-frontend
+spec:
+  selector:
+    app: password-generator-frontend
+  ports:
+  - protocol: TCP
+    port: 80
+  type: LoadBalancer

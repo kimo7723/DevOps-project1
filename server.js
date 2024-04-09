@@ -1,10 +1,13 @@
 const express = require('express');
+const { insertPassword } = require('./database');
 const generatePassword = require('generate-password');
 const app = express();
 const PORT = 3000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+app.use(express.static('public'));
+
 
 // Route for generating passwords
 app.get('/generate-password', (req, res) => {

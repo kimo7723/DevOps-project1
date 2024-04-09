@@ -1,0 +1,56 @@
+/* Import a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* Reset some basic elements */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif; /* Use Nunito font */
+}
+
+/* Apply a subtle background gradient */
+body {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+/* Style the button with a modern look */
+button {
+  background-color: #ff5722; /* A vibrant color */
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700; /* Make text bold */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16); /* Subtle shadow */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #e64a19; /* Darken the color on hover */
+}
+
+/* Style the password display area */
+p#password {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  color: #333;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* Rounded corners */
+  display: inline-block;
+  width: auto;
+  min-width: 200px; /* Minimum width */
+}

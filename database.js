@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 
 // Connect to a database (creates the file if it does not exist)
-const db = new sqlite3.Database('./db/passwords.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
+const db = new sqlite3.Database('./db/passwords.db', (err) => {
     if (err) {
         console.error('Error opening database', err.message);
     } else {
