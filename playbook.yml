@@ -1,0 +1,40 @@
+---
+- name: Update and Deploy to k3s Cluster
+  hosts: localhost
+  become: true
+  vars:
+    backend_image_tag: "{{ backend_image_tag }}"
+    frontend_image_tag: "{{ frontend_image_tag }}"
+  
+  tasks:
+    - name: Set Backend Image
+      community.kubernetes.k8s:
+        kubeconfig: "/etc/rancher/k3s/k3s.yaml"
+        state: present
+        definition:
+          kind: Deployment
+          apiVersion: apps/v1
+          metadata:
+            name: password-generator-backend
+          spec:
+            template:
+              spec:
+                containers:
+                - name: backend
+                  image: "kimo23/password-generator-backend:{{ backend_image_tag }}"
+                  
+    - name: Set Frontend Image
+      community.kubernetes.k8s:
+        kubeconfig: "/etc/rancher/k3s/k3s.yaml"
+        state: present
+        definition:
+          kind: Deployment
+          apiVersion: apps/v1
+          metadata:
+            name: password-generator-frontend
+          spec:
+            template:
+              spec:
+                containers:
+                - name: frontend
+                  image: "kimo23/password-generator-frontend:{{ frontend_image_tag }}"
