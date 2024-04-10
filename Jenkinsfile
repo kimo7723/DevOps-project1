@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Run your Ansible playbook here. Ensure Ansible is installed on the Jenkins executor.
-                    sh 'ansible-playbook -i inventory.yml playbook.yml --extra-vars "backend_image_tag=${env.BUILD_NUMBER} frontend_image_tag=${env.BUILD_NUMBER}"'
+                    sh "ansible-playbook -i inventory.yml playbook.yml --extra-vars 'backend_image_tag=${env.BUILD_NUMBER} frontend_image_tag=${env.BUILD_NUMBER}'"
                 }
             }
         }
