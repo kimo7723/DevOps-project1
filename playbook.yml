@@ -7,9 +7,15 @@
     frontend_image_tag: "{{ frontend_image_tag }}"
   
   tasks:
+    - name: Debug k3s connectivity
+      command: kubectl get nodes --kubeconfig=/etc/rancher/k3s/k3s.yaml
+      register: kubectl_output
+    - debug: msg="{{ kubectl_output.stdout_lines }}"
+
+    
     - name: Set Backend Image
       become: true
-      community.kubernetes.k8s:
+      kubernetes.core.k8s:
         kubeconfig: "/etc/rancher/k3s/k3s.yaml"
         state: present
         definition:
@@ -17,6 +23,7 @@
           apiVersion: apps/v1
           metadata:
             name: password-generator-backend
+            namespace: default
           spec:
             template:
               spec:
@@ -25,7 +32,7 @@
                   image: "kimo23/password-generator-backend:{{ backend_image_tag }}"
                   
     - name: Set Frontend Image
-      community.kubernetes.k8s:
+      kubernetes.core.k8s:
         kubeconfig: "/etc/rancher/k3s/k3s.yaml"
         state: present
         definition:
@@ -33,6 +40,7 @@
           apiVersion: apps/v1
           metadata:
             name: password-generator-frontend
+            namespace: default
           spec:
             template:
               spec:
