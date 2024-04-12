@@ -1,22 +1,32 @@
-/* Import Google Font and define keyframe for animations */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+/* Import Google Fonts and define keyframe for animations */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;600&display=swap');
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
 
-/* Basic resets */
+/* Cursor styles */
+html {
+  cursor: url('https://example.com/custom-cursor.png'), auto; /* Update this URL with your custom cursor image */
+}
+
+/* Basic resets with modern typography */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
-  color: #fff; /* Bright text for dark backgrounds */
+  font-family: 'Poppins', sans-serif;
+  color: #ddd; /* Lighter text color */
+  overflow-x: hidden;
 }
 
-/* Dark themed fullscreen background with animated gradient */
+/* Enhanced fullscreen background with a less oppressive feel */
 body {
-  background: linear-gradient(120deg, #121212 0%, #1e1e1e 50%, #2a2a2a 100%);
+  background: linear-gradient(135deg, #292E49 0%, #536976 100%);
   animation: fadeIn 2s ease-out;
   display: flex;
   justify-content: center;
@@ -25,43 +35,44 @@ body {
   text-align: center;
 }
 
-/* Heading styles with neon glow for enhanced visibility */
+/* Heading styles with modern font, shadow and animation */
 h1 {
   margin-bottom: 2rem;
-  color: #76ff03; /* Neon green for a techy look */
-  text-shadow: 0 0 10px #76ff03;
+  font-family: 'Nunito', sans-serif;
+  color: #ccd6f6;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  animation: float 6s ease-in-out infinite;
 }
 
-/* Stylish modern button with hover and focus effects, suitable for dark themes */
+/* Stylish modern button with hover and focus effects, and continuous animation */
 button {
-  background-color: #333; /* Dark grey background */
+  background-color: #576F72; /* Subdued teal */
   color: #fff;
   border: none;
   padding: 1rem 2rem;
   font-size: 1.25rem;
   font-weight: 700;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 3s ease-in-out infinite alternate;
 }
 
 button:hover, button:focus {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(255,255,255,0.3);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Enhanced password display with more visual clarity */
+/* Glassmorphism effect for password display with subtle glow */
 p#password {
-  background-color: rgba(50, 50, 50, 0.9); /* Dark semi-transparent background */
-  color: #ccc;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
   font-size: 1.5rem;
   padding: 0.75rem 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
-}
-
-/* Adding subtle animation to the password area */
-p#password {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   animation: fadeIn 1s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
