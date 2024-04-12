@@ -4,6 +4,13 @@ pipeline {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
     }
     stages {
+        stage('Check k3s Config Access') {
+            steps {
+                script {
+                    sh "cat /etc/rancher/k3s/k3s.yaml"
+                }
+            }
+        }
         stage('Build and Push Docker Images') {
             steps {
                 script {
