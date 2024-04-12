@@ -9,10 +9,6 @@
   50% { transform: translateY(-20px); }
 }
 
-/* Cursor styles */
-html {
-  cursor: url('https://example.com/custom-cursor.png'), auto; /* Update this URL with your custom cursor image */
-}
 
 /* Basic resets with modern typography */
 html, body {
