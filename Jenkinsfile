@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-        stage('Prepare Environment') {
+        stage('Installing kubernetes.core collection') {
             steps {
                 script {
                     sh 'ansible-galaxy collection install kubernetes.core -p ./collections'

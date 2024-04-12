@@ -11,7 +11,7 @@ html, body {
 
 /* Apply a subtle background gradient */
 body {
-  background: linear-gradient(to right, #a15d4c, #2193b0);
+  background: linear-gradient(to right, #883a26, #2193b0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,12 +21,12 @@ body {
 
 h1 {
   margin-bottom: 2rem;
-  color: #fff;
+  color: #080505;
 }
 
 /* Style the button with a modern look */
 button {
-  background-color: #70CF17; /* A vibrant color */
+  background-color: #000000; /* A vibrant color */
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
