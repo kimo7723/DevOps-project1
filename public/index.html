@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ДО-8 Проект "Пароль-Генератор с использованием CI/CD"</h1>
+    <h1>Password Generator</h1>
     <div>
-        <label><input type="checkbox" id="symbols" checked>Symbols</label>
-        <label><input type="checkbox" id="uppercase" checked>Uppercase</label>
-        <label><input type="checkbox" id="lowercase" checked>Lowercase</label>
-        <label><input type="checkbox" id="numbers" checked>Numbers</label>
-        <label>Length: <input type="number" id="length" value="12" min="4" max="32"></label>
+        <input type="number" id="length" placeholder="Length (8-128)" min="8" max="128" value="20">
+        <label><input type="checkbox" id="numbers" checked> Numbers</label>
+        <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+        <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+        <label><input type="checkbox" id="symbols" checked> Symbols</label>
     </div>
     <button id="generate">Generate Password</button>
     <p id="password"></p>

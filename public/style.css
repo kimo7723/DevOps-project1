@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
 }
+
 body {
   background: linear-gradient(to right, #a15d4c, #2193b0);
   display: flex;
@@ -12,12 +14,19 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  transition: background-color 0.3s;
+  animation: backgroundShift 30s infinite alternate;
 }
+
+@keyframes backgroundShift {
+  from { background: linear-gradient(to right, #a15d4c, #2193b0); }
+  to { background: linear-gradient(to right, #f4e2d8, #928DAB); }
+}
+
 h1 {
   margin-bottom: 2rem;
   color: #fff;
 }
+
 button {
   background-color: #70CF17;
   color: #fff;
@@ -30,13 +39,19 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 button:hover {
   background-color: #e64a19;
 }
+
 p#password {
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   font-size: 1.25rem;
   margin-top: 1rem;
-  padding: 0.5rem
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  width: auto;
+  min-width: 200px;
 }
