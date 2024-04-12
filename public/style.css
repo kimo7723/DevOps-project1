@@ -11,7 +11,7 @@ html, body {
 
 /* Apply a subtle background gradient */
 body {
-  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #a15d4c, #2193b0);
   display: flex;
   justify-content: center;
   align-items: center;
