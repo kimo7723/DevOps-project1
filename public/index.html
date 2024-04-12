@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>ДО-8 Проект "Пароль-Генератор с использованием CI/CD"</h1>
+    <div>
+        <label><input type="checkbox" id="symbols" checked>Symbols</label>
+        <label><input type="checkbox" id="uppercase" checked>Uppercase</label>
+        <label><input type="checkbox" id="lowercase" checked>Lowercase</label>
+        <label><input type="checkbox" id="numbers" checked>Numbers</label>
+        <label>Length: <input type="number" id="length" value="12" min="4" max="32"></label>
+    </div>
     <button id="generate">Generate Password</button>
     <p id="password"></p>
     <script src="script.js"></script>

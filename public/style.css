@@ -1,62 +1,42 @@
-/* Import Google Fonts and define keyframe for animations */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;600&display=swap');
-
-/* Basic resets with modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #ddd; /* Lighter text color */
-  overflow-x: hidden;
+  font-family: 'Nunito', sans-serif;
 }
-
-/* Smooth and clean background with a subtle texture */
 body {
-  background: linear-gradient(135deg, #2c3e50, #bdc3c7);
-  background-size: cover;
+  background: linear-gradient(to right, #a15d4c, #2193b0);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  transition: background-color 0.3s;
 }
-
-/* Heading styles with modern font and shadow */
 h1 {
   margin-bottom: 2rem;
-  font-family: 'Nunito', sans-serif;
-  color: #ccd6f6;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  color: #fff;
 }
-
-/* Stylish modern button with hover and focus effects */
 button {
-  background-color: #576F72; /* Subdued teal */
+  background-color: #70CF17;
   color: #fff;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s;
 }
-
-button:hover, button:focus {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+button:hover {
+  background-color: #e64a19;
 }
-
-/* Glassmorphism effect for password display with subtle glow */
 p#password {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding: 0.5rem
 }

@@ -9,18 +9,17 @@ app.use(express.json());
 app.use(express.static('public'));
 
 
-// Route for generating passwords
 app.get('/generate-password', (req, res) => {
+    const { length, numbers, uppercase, lowercase, symbols } = req.query;
     const password = generatePassword.generate({
-        length: 20,
-        numbers: true,
-        uppercase: true,
-        lowercase: true,
-        symbols: true,
+        length: parseInt(length, 10) || 12, // Default length to 12 if not specified
+        numbers: numbers === 'true',
+        uppercase: uppercase === 'true',
+        lowercase: lowercase === 'true',
+        symbols: symbols === 'true',
     });
 
     insertPassword(password);
-
     res.json({ password });
 });
 
