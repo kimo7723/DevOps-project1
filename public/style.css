@@ -27,7 +27,7 @@ h1 {
   border-radius: 20px;
   padding: 150px;
   min-width: 700px;
-  width: 75%;
+  width: 65%;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
 }
