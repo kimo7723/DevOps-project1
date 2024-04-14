@@ -21,6 +21,40 @@ body {
   from { background: linear-gradient(to right, #a15d4c, #2193b0); }
   to { background: linear-gradient(to right, #f4e2d8, #928DAB); }
 }
+@keyframes backgroundShift {
+  0% {
+    background: linear-gradient(to right, #a15d4c, #2193b0);
+  }
+  25% {
+    background: linear-gradient(to right, #f4e2d8, #928dab);
+  }
+  50% {
+    background: linear-gradient(to right, #22c1c3, #fdbb2d);
+  }
+  75% {
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+  }
+  100% {
+    background: linear-gradient(to right, #a15d4c, #2193b0);
+  }
+}
+@keyframes backgroundShift {
+  0% {
+    background: linear-gradient(to right, #a15d4c, #2193b0);
+  }
+  25% {
+    background: linear-gradient(to right, #f4e2d8, #928dab);
+  }
+  50% {
+    background: linear-gradient(to right, #22c1c3, #fdbb2d);
+  }
+  75% {
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+  }
+  100% {
+    background: linear-gradient(to right, #a15d4c, #2193b0);
+  }
+}
 
 h1 {
   margin-bottom: 2rem;
@@ -54,4 +88,26 @@ p#password {
   display: inline-block;
   width: auto;
   min-width: 200px;
+}
+/* Enhance styles */
+
+body {
+  font-size: 16px; /* Increase base font size */
+}
+
+h1 {
+  text-shadow: 2px 2px #333; /* Add text shadow */
+}
+
+button {
+  transition: all 0.3s ease; /* Smoother transitions */
+}
+
+button:hover {
+  transform: translateY(-2px); /* Shift button on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+p#password {
+  text-shadow: 1px 1px #eee; /* Subtle text shadow */
 }
