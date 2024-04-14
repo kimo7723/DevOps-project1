@@ -23,19 +23,22 @@ h1 {
 }
 
 .options {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better readability */
   border-radius: 10px;
-  padding: 20px;
-  width: auto;
+  padding: 40px; /* Increased padding */
+  min-width: 300px; /* Minimum width */
+  width: 30%; /* Relative width to the viewport */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .option {
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Increased space between options */
   color: #fff;
+  font-size: 18px; /* Increased font size */
 }
 
 label {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 input[type=checkbox] {
@@ -43,7 +46,7 @@ input[type=checkbox] {
 }
 
 input[type=number] {
-  width: 50px;
+  width: 80px;
   margin-left: 10px;
 }
 
@@ -52,8 +55,9 @@ button {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem; /* Increased padding for a larger button */
   cursor: pointer;
+  font-size: 18px; /* Larger font size for button text */
 }
 
 button:hover {
@@ -62,8 +66,12 @@ button:hover {
 
 #password {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better readability */
+  padding: 20px; /* Increased padding */
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 15px; /* Increased margin-top */
+  font-size: 18px; /* Increased font size for password */
+  min-width: 300px; /* Minimum width */
+  display: block; /* Change to block to take full width */
+  text-align: center; /* Center the password text */
 }
