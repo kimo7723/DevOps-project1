@@ -15,6 +15,7 @@ document.getElementById('generate').addEventListener('click', function() {
         .catch(error => console.error('Error:', error));
 });
 
+// Update this function for the range input
 document.getElementById('length').addEventListener('input', function() {
     document.getElementById('length-value').textContent = this.value;
 });
