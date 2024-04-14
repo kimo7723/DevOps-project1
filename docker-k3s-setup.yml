@@ -1,0 +1,26 @@
+# docker-k3s-setup.yml
+
+- hosts: all
+  become: yes
+
+  tasks:
+
+  - name: Check if Docker is installed
+    command: which docker
+    register: docker_check
+    failed_when: docker_check.rc != 0
+
+  - name: Install Docker if needed
+    apt:
+      name: docker.io
+      state: present
+    when: docker_check.rc != 0
+
+  - name: Check if k3s is installed
+    command: which k3s
+    register: k3s_check
+    failed_when: k3s_check.rc != 0
+
+  - name: Install k3s if needed
+    command: curl -sfL https://get.k3s.io | sh -
+    when: k3s_check.rc != 0

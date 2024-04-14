@@ -4,6 +4,11 @@ pipeline {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
     }
     stages {
+        stage('Docker and k3s Setup') {
+            steps {
+                sh 'ansible-playbook docker-k3s-setup.yml' 
+            }
+        }
         stage('Check k3s Config Access') {
             steps {
                 script {
