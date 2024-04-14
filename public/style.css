@@ -29,6 +29,7 @@ h1 {
   min-width: 300px;
   width: 30%;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
 }
 
 .option {
