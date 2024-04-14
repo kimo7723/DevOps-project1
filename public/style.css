@@ -18,8 +18,13 @@ html, body {
 }
 
 h1 {
+  text-shadow: 2px 2px #333; /* Adds a shadow */
+  
+  /* Other highlight styles */
+  background-color: #333;
   color: #fff;
-  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 5px; 
 }
 
 .options {
