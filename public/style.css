@@ -1,40 +1,88 @@
-:root {
-  --primary: #333;
-  --secondary: #eee; 
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
-*, *::before, *::after {
-  box-sizing: border-box;
+/**
+ * Applies a consistent base style to the HTML document, including setting the
+ * font family to 'Nunito' and removing any default margin and padding.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(to right, #ffffff, #000000);  
+  background: linear-gradient(-45deg, #853737, #991818, #1b24aa, #44499b);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite; 
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {  
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%; 
+  }
+}
+
+
 h1 {
-  font-size: clamp(2rem, 8vw, 4rem);
+  margin-bottom: 2rem;
+  color: #fff;
 }
 
 button {
-  padding: .75em 1.5em;
+  background-color: #0e1409;
+  color: #fff;
   border: none;
-  border-radius: .25em;
-  background: var(--primary);
-  color: var(--secondary);
-  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-@media (max-width: 600px) {
+button:hover {
+  background-color: #e64a19;
+}
 
-  body {
-    padding: 1em;
-  }
+p#password {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  width: auto;
+  min-width: 200px;
+}
+/* Enhance styles */
 
-  h1 {
-    font-size: 2rem;
-  }
+body {
+  font-size: 16px; /* Increase base font size */
+}
 
+h1 {
+  text-shadow: 2px 2px #333; /* Add text shadow */
+}
+
+button {
+  transition: all 0.3s ease; /* Smoother transitions */
+}
+
+button:hover {
+  transform: translateY(-2px); /* Shift button on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+p#password {
+  text-shadow: 1px 1px #eee; /* Subtle text shadow */
 }
