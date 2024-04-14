@@ -13,32 +13,20 @@ body {
 }
 
 body {
-  background: linear-gradient(to right, #922c12, #128caa);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  animation: backgroundShift 30s infinite alternate;
-}
-
-body {
   background: linear-gradient(-45deg, #ad4b2d, #991818, #23a6d5, #39a38a);
   background-size: 400% 400%;
-  animation: gradient 2s ease infinite; 
+  animation: gradient 10s ease infinite; 
 }
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    background-position: 0% 0%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 100%;
   }
 }
+
 
 h1 {
   margin-bottom: 2rem;
