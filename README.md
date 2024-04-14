@@ -1,6 +1,8 @@
-## Overview
+![image](https://github.com/kimo7723/DevOps-project1/assets/113859211/d532d5ec-2937-4118-80bb-18bb0ffbc448)## Overview
 
 This project implements a password generator web application with a Dockerized backend API and frontend UI. The application is deployed to a Kubernetes cluster using Ansible. CI/CD pipelines are implemented in Jenkins.
+
+![Screenshot from 2024-04-14 11-02-13](https://github.com/kimo7723/DevOps-project1/assets/113859211/fb5a499f-7399-49f5-86a6-c568f147d92b)
 
 ## Frontend
 
