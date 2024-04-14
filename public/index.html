@@ -1,14 +1,17 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div style="display: flex; flex-direction: column; align-items: center">
-      <h1>Password Generator</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <h1>Password Generator</h1>
+
+    <div class="checkboxes">
       <div style="border: 1px solid #ccc; padding: 10px">
         <div style="margin-bottom: 10px">
           <label style="font-size: 18px"
@@ -43,13 +46,21 @@
           value="20"
         />
       </div>
-
-      <button id="generate">Generate Password</button>
-      <p id="password"></p>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <input 
+      type="range"
+      id="length"
+      min="8"
+      max="128"
+      value="20">
+    
+    <button id="generate">Generate</button>
+  </header>
 
+  <main id="password"></main>
+
+  <script type="module" src="script.js"></script>
+
+</body>
 </html>
-
