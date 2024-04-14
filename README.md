@@ -32,22 +32,24 @@ The frontend and backend are containerized into separate Docker images.
 
 ## Kubernetes Deployment
 
-The containers are deployed to a Kubernetes cluster managed by k3s and configured using Ansible.
+The containers are deployed to a Kubernetes cluster managed by k3s .
+
+- `backend-deployment.yaml` - Backend Kubernetes deployment manifest
+- `frontend-deployment.yaml` - Frontend Kubernetes deployment manifest
+
+
+## CI/CD
+
+Jenkins is used to implement CI/CD pipelines for configure the environment, building, testing and deploying the application via ansible playbooks.
+
+- `Jenkinsfile` - Declarative Jenkins pipeline 
 
 - `inventory.yml` - Ansible inventory file
 - `ansible.cfg` - Ansible configuration
 - `docker-k3s-setup.yml` - Playbook to install Docker and k3s
 - `playbook.yml` - Main playbook to deploy containers
 
-## CI/CD
-
-Jenkins is used to implement CI/CD pipelines for building, testing and deploying the application.
-
-- `Jenkinsfile` - Declarative Jenkins pipeline 
-- `backend-deployment.yaml` - Backend Kubernetes deployment manifest
-- `frontend-deployment.yaml` - Frontend Kubernetes deployment manifest
-
-The Jenkins pipeline builds Docker images, pushes them to Docker Hub, and deploys them to the Kubernetes cluster on each commit.
+The Jenkins pipeline builds Docker images, pushes them to Docker Hub, and deploys them to the Kubernetes cluster via ansible on each commit.
 
 ## Additional Files
 
