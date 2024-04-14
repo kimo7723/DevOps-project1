@@ -17,12 +17,15 @@ body {
   animation: backgroundShift 30s infinite alternate;
 }
 
-
+@keyframes backgroundShift {
+  from { background: linear-gradient(to right, #a15d4c, #2193b0); }
+  to { background: linear-gradient(to right, #f4e2d8, #928DAB); }
+}
 /* Add smooth background transition */
 body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; 
 }
 
 @keyframes gradient {
@@ -36,8 +39,6 @@ body {
     background-position: 0% 50%;
   }
 }
-
-
 
 h1 {
   margin-bottom: 2rem;

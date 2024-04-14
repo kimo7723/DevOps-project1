@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,12 +8,19 @@
 <body>
     <h1>Password Generator</h1>
     <div>
-        <input type="number" id="length" placeholder="Length (8-128)" min="8" max="128" value="20">
-        <label><input type="checkbox" id="numbers" checked> Numbers</label>
-        <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
-        <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
-        <label><input type="checkbox" id="symbols" checked> Symbols</label>
-    </div>
+        <label><input type="checkbox" id="symbols" checked /> Symbols</label>
+        <label><input type="checkbox" id="numbers" checked /> Numbers</label>
+        <label><input type="checkbox" id="uppercase" checked /> Uppercase</label>
+        <label><input type="checkbox" id="lowercase" checked /> Lowercase</label>
+        <input
+          type="number"
+          id="length"
+          placeholder="Length (8-128)"
+          min="8"
+          max="128"
+          value="20"
+        />
+      </div>
     <button id="generate">Generate Password</button>
     <p id="password"></p>
     <script src="script.js"></script>
