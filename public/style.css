@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
-html, body {
+/**
+ * Applies a consistent base style to the HTML document, including setting the
+ * font family to 'Nunito' and removing any default margin and padding.
+ */
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, #a15d4c, #2193b0);
+  background: linear-gradient(to right, #922c12, #128caa);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,15 +22,10 @@ body {
   animation: backgroundShift 30s infinite alternate;
 }
 
-@keyframes backgroundShift {
-  from { background: linear-gradient(to right, #a15d4c, #2193b0); }
-  to { background: linear-gradient(to right, #f4e2d8, #928DAB); }
-}
-/* Add smooth background transition */
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ad4b2d, #991818, #23a6d5, #39a38a);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite; 
+  animation: gradient 2s ease infinite; 
 }
 
 @keyframes gradient {

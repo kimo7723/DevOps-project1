@@ -1,3 +1,10 @@
+/**
+ * The HTML structure for a password generator application.
+ * This includes a form with checkboxes to control the password generation options,
+ * an input field to set the password length, a button to generate the password,
+ * and a paragraph element to display the generated password.
+ * The application logic is implemented in the 'script.js' file.
+ */
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,24 +14,39 @@
 </head>
 <body>
     <h1>Password Generator</h1>
-    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+    
+    <div style="border: 1px solid #ccc; padding: 10px;">
+  
+      <div style="margin-bottom: 10px;">
         <label style="font-size: 18px;"><input type="checkbox" id="symbols" checked /> Symbols</label>
-        <label style="font-size: 18px;"><input type="checkbox" id="numbers" checked /> Numbers</label>
-        <label style="font-size: 18px;"><input type="checkbox" id="uppercase" checked /> Uppercase</label>
-        <label style="font-size: 18px;"><input type="checkbox" id="lowercase" checked /> Lowercase</label>
-        <input
-          type="number"
-          id="length"
-          placeholder="Length (8-128)"
-          min="8"
-          max="128"
-          value="20"
-        />
       </div>
+
+      <div style="margin-bottom: 10px;">
+        <label style="font-size: 18px;"><input type="checkbox" id="numbers" checked /> Numbers</label>
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <label style="font-size: 18px;"><input type="checkbox" id="uppercase" checked /> Uppercase</label>
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <label style="font-size: 18px;"><input type="checkbox" id="lowercase" checked /> Lowercase</label>
+      </div>
+
+      <input
+        type="number"
+        id="length"
+        placeholder="Length (8-128)"
+        min="8"
+        max="128"
+        value="20"
+      />
+
+    </div>
+    
     <button id="generate">Generate Password</button>
     <p id="password"></p>
     <script src="script.js"></script>
 </body>
 </html>
-
 </html>
