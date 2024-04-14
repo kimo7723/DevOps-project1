@@ -11,6 +11,7 @@ document.getElementById('generate').addEventListener('click', function() {
             const passwordField = document.getElementById('password');
             passwordField.textContent = data.password;
             navigator.clipboard.writeText(data.password); // Auto-copy feature
+            showCopiedNotification();
         })
         .catch(error => console.error('Error:', error));
 });
@@ -19,3 +20,21 @@ document.getElementById('generate').addEventListener('click', function() {
 document.getElementById('length').addEventListener('input', function() {
     document.getElementById('length-value').textContent = this.value;
 });
+
+// Add this function
+function showCopiedNotification() {
+
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.classList.add('copied');
+  notification.textContent = 'Copied!';
+
+  // Append to body
+  document.body.appendChild(notification);
+
+  // Remove after 2 seconds
+  setTimeout(() => {
+    notification.remove(); 
+  }, 2000);
+
+}
