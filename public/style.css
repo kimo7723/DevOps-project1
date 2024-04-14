@@ -95,6 +95,7 @@ button {
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 18px;
+  box-shadow: 0 0 10px #fff;
 }
 
 button:hover {
@@ -111,6 +112,5 @@ button:hover {
   min-width: 300px;
   display: block;
   text-align: center;
-  box-shadow: 0 0 10px #fff;
 }
 
