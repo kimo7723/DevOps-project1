@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Docker and k3s Setup') {
             steps {
-                sh 'ansible-playbook docker-k3s-setup.yml' 
+                sh 'ansible-playbook docker-k3s-setup.yml -i inventory.yml' 
             }
         }
         stage('Check k3s Config Access') {
