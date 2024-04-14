@@ -14,3 +14,7 @@ document.getElementById('generate').addEventListener('click', function() {
         })
         .catch(error => console.error('Error:', error));
 });
+
+document.getElementById('length').addEventListener('input', function() {
+    document.getElementById('length-value').textContent = this.value;
+});
