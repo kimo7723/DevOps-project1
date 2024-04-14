@@ -66,6 +66,8 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   background: #000000;
   cursor: pointer;
+  box-shadow: 0 0 10px #fff;
+
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -101,7 +103,7 @@ button:hover {
 
 #password {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(15, 14, 14, 0.5);
   padding: 20px;
   border-radius: 5px;
   margin-top: 15px;
@@ -109,4 +111,6 @@ button:hover {
   min-width: 300px;
   display: block;
   text-align: center;
+  box-shadow: 0 0 10px #fff;
 }
+
