@@ -1,55 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div style="display: flex; flex-direction: column; align-items: center">
-      <h1>Password Generator</h1>
-
-      <div style="border: 1px solid #ccc; padding: 10px">
-        <div style="margin-bottom: 10px">
-          <label style="font-size: 18px"
-            ><input type="checkbox" id="symbols" checked /> Symbols</label
-          >
-        </div>
-
-        <div style="margin-bottom: 10px">
-          <label style="font-size: 18px"
-            ><input type="checkbox" id="numbers" checked /> Numbers</label
-          >
-        </div>
-
-        <div style="margin-bottom: 10px">
-          <label style="font-size: 18px"
-            ><input type="checkbox" id="uppercase" checked /> Uppercase</label
-          >
-        </div>
-
-        <div style="margin-bottom: 10px">
-          <label style="font-size: 18px"
-            ><input type="checkbox" id="lowercase" checked /> Lowercase</label
-          >
-        </div>
-
-        <input
-          type="number"
-          id="length"
-          placeholder="Length (8-128)"
-          min="8"
-          max="128"
-          value="20"
-        />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Generator</h1>
+    
+    <div class="options">
+      <div class="option">
+        <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
       </div>
-
-      <button id="generate">Generate Password</button>
-      <p id="password"></p>
+      <div class="option">
+        <label><input type="checkbox" id="lowercase" checked> Small Letters (a-z)</label>
+      </div>
+      <div class="option">
+        <label><input type="checkbox" id="uppercase" checked> Capital Letters (A-Z)</label>
+      </div>
+      <div class="option">
+        <label><input type="checkbox" id="symbols" checked> Special Characters (!@#...)</label>
+      </div>
+      <div class="option">
+        <label for="length">Length</label>
+        <input type="number" id="length" value="21" min="8" max="128">
+      </div>
+      <button id="generate">Generate</button>
+      <div id="password">e+sewq;/emtUbo<NGJVS</div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
-
+  <script src="script.js"></script>
+</body>
 </html>
-
