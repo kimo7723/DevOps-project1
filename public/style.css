@@ -5,7 +5,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;
-  background: url('pexels-francesco-ungaro-998641.jpg') no-repeat center center fixed;
+  background: url('660009.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -25,9 +25,9 @@ h1 {
 .options {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  padding: 40px;
-  min-width: 300px;
-  width: 30%;
+  padding: 55px;
+  min-width: 350px;
+  width: 35%;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
 }
