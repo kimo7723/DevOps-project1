@@ -4,6 +4,9 @@ This project implements a password generator web application with a Dockerized b
 
 ![Screenshot from 2024-04-14 11-02-13](https://github.com/kimo7723/DevOps-project1/assets/113859211/fb5a499f-7399-49f5-86a6-c568f147d92b)
 
+
+
+
 ## Frontend
 
 The frontend is a simple HTML, CSS and JavaScript application in the `public/` directory.
@@ -14,6 +17,9 @@ The frontend is a simple HTML, CSS and JavaScript application in the `public/` d
 
 The frontend calls the backend API to generate passwords and displays them.
 
+
+
+
 ## Backend
 
 The backend is a Node.js application with Express and SQLite.
@@ -23,6 +29,9 @@ The backend is a Node.js application with Express and SQLite.
 
 The backend generates random passwords and stores them in a SQLite database.
 
+
+
+
 ## Docker
 
 The frontend and backend are containerized into separate Docker images.
@@ -30,12 +39,17 @@ The frontend and backend are containerized into separate Docker images.
 - `Dockerfile` - Dockerfile for the backend
 - `public/Dockerfile` - Dockerfile for the frontend
 
+
+
+
 ## Kubernetes Deployment
 
 The containers are deployed to a Kubernetes cluster managed by k3s .
 
 - `backend-deployment.yaml` - Backend Kubernetes deployment manifest
 - `frontend-deployment.yaml` - Frontend Kubernetes deployment manifest
+
+
 
 
 ## CI/CD
