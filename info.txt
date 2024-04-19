@@ -1,0 +1,32 @@
+● k3s.service - Lightweight Kubernetes
+     Loaded: loaded (/etc/systemd/system/k3s.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2024-04-13 01:42:04 MSK; 2 days ago
+       Docs: https://k3s.io
+    Process: 1831 ExecStartPre=/bin/sh -xc ! /usr/bin/systemctl is-enabled --quiet nm-cloud-setup.service 2>/dev/null (code=exited, status=0/SUCCESS)
+    Process: 1862 ExecStartPre=/sbin/modprobe br_netfilter (code=exited, status=0/SUCCESS)
+    Process: 1946 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 1962 (k3s-server)
+      Tasks: 195
+     Memory: 1.9G
+        CPU: 1h 31min 49.618s
+     CGroup: /system.slice/k3s.service
+             ├─  1962 "/usr/local/bin/k3s server"
+             ├─  2361 "containerd " "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─  3256 /var/lib/rancher/k3s/data/ef92c15b8f1c59f266ea4a9589be87b1b799d1682673f29721e8a1f7b0a4a97b/bin/containerd-shim-runc-v2 -namespace k8s.io -id a53cba9fd8b087acbd3b1a4142c03e766c94c58e63e7b473f1d48e11f2c4fff0 -address /run/k3s/containerd/containerd.sock
+             ├─  3257 /var/lib/rancher/k3s/data/ef92c15b8f1c59f266ea4a9589be87b1b799d1682673f29721e8a1f7b0a4a97b/bin/containerd-shim-runc-v2 -namespace k8s.io -id 6b2fe0fbba3c18f83106e29ba255b572c266e00bbe556292c48e6b65a24ba0e3 -address /run/k3s/containerd/containerd.sock
+             ├─  3376 /var/lib/rancher/k3s/data/ef92c15b8f1c59f266ea4a9589be87b1b799d1682673f29721e8a1f7b0a4a97b/bin/containerd-shim-runc-v2 -namespace k8s.io -id 464d021d0728a32b69fda8b3ff6dd0e703e586be9a664befd23b208798b3ff9f -address /run/k3s/containerd/containerd.sock
+             ├─  3860 /var/lib/rancher/k3s/data/ef92c15b8f1c59f266ea4a9589be87b1b799d1682673f29721e8a1f7b0a4a97b/bin/containerd-shim-runc-v2 -namespace k8s.io -id a287ccd01c0f4ab574f1e577c5969161e1df184f87b690a00f4600e91e4098fb -address /run/k3s/containerd/containerd.sock
+             ├─  3950 /var/lib/rancher/k3s/data/ef92c15b8f1c59f266ea4a9589be87b1b799d1682673f29721e8a1f7b0a4a97b/bin/containerd-shim-runc-v2 -namespace k8s.io -id ef773184a1d8c880486c109e85db787cdadf25e48e1aa00f743c3d67dea73e32 -address /run/k3s/containerd/containerd.sock
+             ├─221732 /var/lib/rancher/k3s/data/ef92c15b8f1c59f266ea4a9589be87b1b799d1682673f29721e8a1f7b0a4a97b/bin/containerd-shim-runc-v2 -namespace k8s.io -id 23a8c6628aad49fcd868e0d722a93efb8dc9e89fba65c66ea882545fc6cda9e4 -address /run/k3s/containerd/containerd.sock
+             └─221850 /var/lib/rancher/k3s/data/ef92c15b8f1c59f266ea4a9589be87b1b799d1682673f29721e8a1f7b0a4a97b/bin/containerd-shim-runc-v2 -namespace k8s.io -id e41c074c6b2cbb0837ac123c809907705da0e788dc58c4d97e0651df86860c88 -address /run/k3s/containerd/containerd.sock
+
+апр 15 04:24:52 msi k3s[1962]: time="2024-04-15T04:24:52+03:00" level=info msg="COMPACT compactRev=35463 targetCompactRev=35557 currentRev=36557"
+апр 15 04:24:52 msi k3s[1962]: time="2024-04-15T04:24:52+03:00" level=info msg="COMPACT deleted 94 rows from 94 revisions in 5.963232ms - compacted to 35557/36557"
+апр 15 04:29:52 msi k3s[1962]: time="2024-04-15T04:29:52+03:00" level=info msg="COMPACT compactRev=35557 targetCompactRev=35647 currentRev=36647"
+апр 15 04:29:52 msi k3s[1962]: time="2024-04-15T04:29:52+03:00" level=info msg="COMPACT deleted 89 rows from 90 revisions in 7.13505ms - compacted to 35647/36647"
+апр 15 04:34:52 msi k3s[1962]: time="2024-04-15T04:34:52+03:00" level=info msg="COMPACT compactRev=35647 targetCompactRev=35738 currentRev=36738"
+апр 15 04:34:52 msi k3s[1962]: time="2024-04-15T04:34:52+03:00" level=info msg="COMPACT deleted 91 rows from 91 revisions in 6.369808ms - compacted to 35738/36738"
+апр 15 04:39:52 msi k3s[1962]: time="2024-04-15T04:39:52+03:00" level=info msg="COMPACT compactRev=35738 targetCompactRev=35828 currentRev=36828"
+апр 15 04:39:52 msi k3s[1962]: time="2024-04-15T04:39:52+03:00" level=info msg="COMPACT deleted 90 rows from 90 revisions in 6.607825ms - compacted to 35828/36828"
+апр 15 04:44:52 msi k3s[1962]: time="2024-04-15T04:44:52+03:00" level=info msg="COMPACT compactRev=35828 targetCompactRev=35917 currentRev=36917"
+апр 15 04:44:52 msi k3s[1962]: time="2024-04-15T04:44:52+03:00" level=info msg="COMPACT deleted 89 rows from 89 revisions in 5.920139ms - compacted to 35917/36917"
