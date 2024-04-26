@@ -47,7 +47,7 @@ pipeline {
                 }
             }
         }
-        stage('Install Prometheus') {
+        stage('Installing and configuring Prometheus') {
             steps {
                 script {
                     // Install Prometheus and run it in the background
