@@ -47,7 +47,7 @@ pipeline {
                 }
             }
         }
-        stage('Install and configure Prometheus') {
+        stage('Prometheus setup') {
             steps {
                 script {
                     // Check if Prometheus is already installed, if not, install and run it
