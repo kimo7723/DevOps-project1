@@ -39,7 +39,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy with Ansible') {
+        stage('Configuration and Deploy with Ansible') {
             steps {
                 script {
                     // Run your Ansible playbook here. Ensure Ansible is installed on the Jenkins executor.
@@ -47,13 +47,15 @@ pipeline {
                 }
             }
         }
-        stage('Install and configure Prometheus') {
+        stage('Install and configuration of Prometheus') {
             steps {
                 script {
                     // Install Prometheus
                     sh 'wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz'
                     sh 'tar xvfz prometheus-*.tar.gz'
-                    sh 'cd prometheus-2.26.0.linux-amd64 && ./prometheus --config.file=../monitoring/prometheus.yml'
+                    sh 'cd prometheus-2.26.0.linux-amd64'
+                    // Run Prometheus in the background
+                    sh 'nohup ./prometheus --config.file=../monitoring/prometheus.yml &'
                 }
             }
         }
