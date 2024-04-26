@@ -57,7 +57,7 @@ pipeline {
                         tar xvfz prometheus-2.26.0.linux-amd64.tar.gz
                     fi
                     cd prometheus-2.26.0.linux-amd64
-                    nohup ./prometheus --config.file=../../monitoring/prometheus.yml > ${WORKSPACE}/prometheus.log 2>&1 &
+                    nohup ./prometheus --config.file=../monitoring/prometheus.yml > ${WORKSPACE}/prometheus.log 2>&1 &
                     '''
                 }
             }
