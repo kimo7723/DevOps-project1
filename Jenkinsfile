@@ -47,5 +47,15 @@ pipeline {
                 }
             }
         }
+        stage('Install and configure Prometheus') {
+            steps {
+                script {
+                    // Install Prometheus
+                    sh 'wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz'
+                    sh 'tar xvfz prometheus-*.tar.gz'
+                    sh 'cd prometheus-2.26.0.linux-amd64 && ./prometheus --config.file=../monitoring/prometheus.yml'
+                }
+            }
+        }
     }
 }
