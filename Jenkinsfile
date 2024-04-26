@@ -47,17 +47,19 @@ pipeline {
                 }
             }
         }
-        stage('Install and configuration of Prometheus') {
+        stage('Install Prometheus') {
             steps {
                 script {
-                    // Install Prometheus
-                    sh 'wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz'
-                    sh 'tar xvfz prometheus-*.tar.gz'
-                    sh 'cd prometheus-2.26.0.linux-amd64'
-                    // Run Prometheus in the background
-                    sh 'nohup ./prometheus --config.file=../monitoring/prometheus.yml &'
+                    // Install Prometheus and run it in the background
+                    sh '''
+                    wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
+                    tar xvfz prometheus-2.26.0.linux-amd64.tar.gz
+                    cd prometheus-2.26.0.linux-amd64
+                    nohup ./prometheus --config.file=../../monitoring/prometheus.yml > ../prometheus.log 2>&1 &
+                    '''
                 }
             }
         }
+
     }
 }
