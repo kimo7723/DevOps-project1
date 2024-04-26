@@ -55,7 +55,7 @@ pipeline {
                     wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
                     tar xvfz prometheus-2.26.0.linux-amd64.tar.gz
                     cd prometheus-2.26.0.linux-amd64
-                    nohup ./prometheus --config.file=../../monitoring/prometheus.yml > ../prometheus.log 2>&1 &
+                    nohup ./prometheus --config.file=../../monitoring/prometheus.yml > ~/DevOps-project1/prometheus.log 2>&1 &
                     '''
                 }
             }
